@@ -9,6 +9,6 @@
     }
   ]
 , "settings":
-  { "SublimeLinter.linters.standard.disable": false
+  { "SublimeLinter.linters.standard.disable": true
   }
 }
