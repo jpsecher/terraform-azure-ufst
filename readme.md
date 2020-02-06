@@ -67,6 +67,7 @@ Now you can deploy your new shiny empty infrastructure:
 
     $ terraform apply
 
+which will put a blob with the in your storage account.  The state is in JSON and can be hand-edited in case of emergencies.
 
 ## Notes
 
@@ -75,10 +76,6 @@ Now you can deploy your new shiny empty infrastructure:
 The `tenant_id` is the Directory ID, see [portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).  It is a fixed, global property.
 
 The `subscription_id` can be found through the [portal](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).  It is a kind of a cost group or account.  Which one to use depends on whether you are creating resources for experimentation (*Sandbox*) or test (*Games*).  See `../module/settings-azure` for a list.
-
-The `client_id` is (currently) the Application ID of *Terraform v1*, see [portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ApplicationBlade/appId/a614832f-710d-4061-ba3b-90eda3da7392/objectId/85cceaa8-eb09-4e1f-ad7a-d9939bb00b1a).  It should be set in your `secrets-azure.tf` file.
-
-The `client_secret` is a personal token, issued through Azure console.  It should be set in your `secrets-azure.tf` file.
 
 ### Terraform
 
